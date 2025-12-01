@@ -145,7 +145,7 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(16, 263);
+            this.btnGuardar.Location = new System.Drawing.Point(44, 265);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(126, 23);
             this.btnGuardar.TabIndex = 8;
@@ -154,7 +154,7 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(16, 292);
+            this.btnEditar.Location = new System.Drawing.Point(44, 294);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(126, 23);
             this.btnEditar.TabIndex = 9;
@@ -163,7 +163,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(16, 321);
+            this.btnEliminar.Location = new System.Drawing.Point(44, 323);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(126, 23);
             this.btnEliminar.TabIndex = 10;

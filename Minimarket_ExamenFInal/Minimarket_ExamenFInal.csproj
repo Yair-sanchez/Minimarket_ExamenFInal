@@ -58,6 +58,12 @@
     <Compile Include="ClienteFrm.Designer.cs">
       <DependentUpon>ClienteFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormasPagosFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormasPagosFrm.Designer.cs">
+      <DependentUpon>FormasPagosFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="PrincipalFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +77,12 @@
       <DependentUpon>ProductosFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
+    <Compile Include="PromocionesFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PromocionesFrm.Designer.cs">
+      <DependentUpon>PromocionesFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProveedorFrm.cs">
       <SubType>Form</SubType>
@@ -84,11 +96,17 @@
     <EmbeddedResource Include="ClienteFrm.resx">
       <DependentUpon>ClienteFrm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormasPagosFrm.resx">
+      <DependentUpon>FormasPagosFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PrincipalFrm.resx">
       <DependentUpon>PrincipalFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProductosFrm.resx">
       <DependentUpon>ProductosFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PromocionesFrm.resx">
+      <DependentUpon>PromocionesFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -44,5 +44,19 @@ namespace Minimarket_ExamenFInal
             frm.MdiParent = this;
             frm.Show();
         }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            PromocionesFrm frm = new PromocionesFrm();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            FormasPagosFrm frm = new FormasPagosFrm();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }

@@ -37,6 +37,8 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -48,10 +50,12 @@
             this.btnProveedor,
             this.btnProductos,
             this.btnCategoria,
-            this.btnCliente});
+            this.btnCliente,
+            this.toolStripButton1,
+            this.toolStripButton2});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(858, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(858, 31);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -60,7 +64,7 @@
             this.btnProveedor.Image = ((System.Drawing.Image)(resources.GetObject("btnProveedor.Image")));
             this.btnProveedor.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnProveedor.Name = "btnProveedor";
-            this.btnProveedor.Size = new System.Drawing.Size(101, 24);
+            this.btnProveedor.Size = new System.Drawing.Size(101, 28);
             this.btnProveedor.Text = "Proveedor";
             this.btnProveedor.Click += new System.EventHandler(this.btnProveedor_Click);
             // 
@@ -78,7 +82,7 @@
             this.btnCategoria.Image = ((System.Drawing.Image)(resources.GetObject("btnCategoria.Image")));
             this.btnCategoria.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnCategoria.Name = "btnCategoria";
-            this.btnCategoria.Size = new System.Drawing.Size(98, 24);
+            this.btnCategoria.Size = new System.Drawing.Size(98, 28);
             this.btnCategoria.Text = "Categoria";
             this.btnCategoria.Click += new System.EventHandler(this.btnCategoria_Click);
             // 
@@ -87,7 +91,7 @@
             this.btnCliente.Image = ((System.Drawing.Image)(resources.GetObject("btnCliente.Image")));
             this.btnCliente.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnCliente.Name = "btnCliente";
-            this.btnCliente.Size = new System.Drawing.Size(79, 24);
+            this.btnCliente.Size = new System.Drawing.Size(79, 28);
             this.btnCliente.Text = "Cliente";
             this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
             // 
@@ -114,6 +118,24 @@
             this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
             this.toolStripStatusLabel2.Size = new System.Drawing.Size(45, 20);
             this.toolStripStatusLabel2.Text = "Hora:";
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(119, 28);
+            this.toolStripButton1.Text = "Promociones";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(124, 28);
+            this.toolStripButton2.Text = "Formas Pagos";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
             // PrincipalFrm
             // 
@@ -145,6 +167,8 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
         private System.Windows.Forms.ToolStripButton btnCategoria;
         private System.Windows.Forms.ToolStripButton btnCliente;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton toolStripButton2;
     }
 }
 
