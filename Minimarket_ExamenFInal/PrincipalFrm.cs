@@ -33,14 +33,14 @@ namespace Minimarket_ExamenFInal
 
         private void btnCategoria_Click(object sender, EventArgs e)
         {
-            CategoriaFrm frm = new CategoriaFrm();
+            CategoriasFrm frm = new CategoriasFrm();
             frm.MdiParent = this;
             frm.Show();
         }
 
         private void btnCliente_Click(object sender, EventArgs e)
         {
-            ClienteFrm frm = new ClienteFrm();
+            ClientesFrm frm = new ClientesFrm();
             frm.MdiParent = this;
             frm.Show();
         }
@@ -55,6 +55,27 @@ namespace Minimarket_ExamenFInal
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
             FormasPagosFrm frm = new FormasPagosFrm();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            ComprasFrm frm = new ComprasFrm();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+            VentasFrm frm = new VentasFrm();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void toolStripButton5_Click(object sender, EventArgs e)
+        {
+            Movimientos_de_inventarioFrm frm = new Movimientos_de_inventarioFrm();
             frm.MdiParent = this;
             frm.Show();
         }

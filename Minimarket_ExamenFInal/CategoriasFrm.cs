@@ -12,19 +12,20 @@ using Minimarket_ExamenFInal.Modelos;
 
 namespace Minimarket_ExamenFInal
 {
-    public partial class FormasPagosFrm : Form
+    public partial class CategoriasFrm : Form
     {
-        int formas_pagos_id = 0;
-        public FormasPagosFrm()
+        int categoria_id = 0;
+        public CategoriasFrm()
         {
             InitializeComponent();
         }
-        private void FormasPagosFrm_Load(object sender, EventArgs e)
+
+        private void CategoriaFrm_Load(object sender, EventArgs e)
         {
-            dgDatos.DataSource = FormasPagos.Obtener();
-            if (dgDatos.Columns.Count > 0)
+            dgDatos.DataSource = Categorias.obtener();
+            if (dgDatos.Columns.Count > 0 )
             {
-                dgDatos.Columns["id_forma_pago"].Visible = false;
+                dgDatos.Columns["id_cat"].Visible = false;
             }
         }
 
@@ -32,31 +33,32 @@ namespace Minimarket_ExamenFInal
         {
             string nombre = txtNombre.Text;
             string descripcion = txtDescripcion.Text;
-            string requiere_referencia = txtRequiere_referencia.Text;
             string estado = txtEstado.Text;
+            string fecha_creacion = txtFecha_creacion.Text;
             bool resultado = false;
-            if (formas_pagos_id == 0)
+            if (categoria_id == 0) 
             {
-                resultado = FormasPagos.Crear(nombre, descripcion, requiere_referencia, estado);
+                resultado = Categorias.Crear(nombre, descripcion, estado, fecha_creacion);
             }
             else
             {
-                resultado = FormasPagos.Editar(formas_pagos_id, nombre, descripcion, requiere_referencia, estado);
+                resultado = Categorias.Editar(categoria_id, nombre, descripcion, estado, fecha_creacion);
             }
             if (resultado)
             {
-                MessageBox.Show("Operacion realizada Correctamente");
+                MessageBox.Show("Operacion Realizada Correctamente");
             }
-            dgDatos.DataSource = FormasPagos.Obtener();
+            dgDatos.DataSource = Categorias.obtener();
             Limpiar();
+
         }
         private void Limpiar()
         {
             txtNombre.Clear();
             txtDescripcion.Clear();
-            txtRequiere_referencia.Clear();
             txtEstado.Clear();
-            formas_pagos_id = 0;
+            txtFecha_creacion.Clear();
+            categoria_id = 0;
             txtNombre.Focus();
         }
 
@@ -64,20 +66,20 @@ namespace Minimarket_ExamenFInal
         {
             txtNombre.Text = dgDatos.CurrentRow.Cells["nombre"].Value.ToString();
             txtDescripcion.Text = dgDatos.CurrentRow.Cells["descripcion"].Value.ToString();
-            txtRequiere_referencia.Text = dgDatos.CurrentRow.Cells["requiere_referencia"].Value.ToString();
             txtEstado.Text = dgDatos.CurrentRow.Cells["estado"].Value.ToString();
-            formas_pagos_id = Convert.ToInt32(dgDatos.CurrentRow.Cells["id_forma_pago"].Value.ToString());
+            txtFecha_creacion.Text = dgDatos.CurrentRow.Cells["fecha_creacion"].Value.ToString();
+            categoria_id = Convert.ToInt32(dgDatos.CurrentRow.Cells["id_cat"].Value.ToString());
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(dgDatos.CurrentRow.Cells["id_forma_pago"].Value.ToString());
-            bool resultado = FormasPagos.Eliminar(id);
+            int id = Convert.ToInt32(dgDatos.CurrentRow.Cells["id_cat"].Value.ToString());
+            bool resultado = Categorias.Eliminar(id);
             if (resultado)
             {
-                MessageBox.Show("Operacion realizada Correctamente");
+                MessageBox.Show("Categoria Eliminada Correctamente");
             }
-            dgDatos.DataSource = FormasPagos.Obtener();
+            dgDatos.DataSource = Categorias.obtener();
             Limpiar();
         }
     }

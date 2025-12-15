@@ -12,81 +12,86 @@ using Minimarket_ExamenFInal.Modelos;
 
 namespace Minimarket_ExamenFInal
 {
-    public partial class ProveedorFrm : Form
+    public partial class ClientesFrm : Form
     {
-        int Proveedor_id = 0;
-        public ProveedorFrm()
+        int cliente_id = 0;
+        public ClientesFrm()
         {
             InitializeComponent();
         }
-
-        private void ProveedorFrm_Load(object sender, EventArgs e)
+        private void ClientesFrm_Load(object sender, EventArgs e)
         {
-            dgDatos.DataSource = Proveedor.obtener();
+            dgDatos.DataSource = Clientes.obtener();
             if (dgDatos.Columns.Count > 0)
             {
-                dgDatos.Columns["id_proveedor"].Visible = false;
+                dgDatos.Columns["id_Cliente"].Visible = false;
             }
         }
 
-        private void btnGuardar_Click(object sender, EventArgs e)
+        private void btnGuardar_Click_1(object sender, EventArgs e)
         {
             string nombre = txtNombre.Text;
-            string ruc_dni = txtRuc_dni.Text;
+            string dni_ruc = txtDNI_RUC.Text;
             string telefono = txtTelefono.Text;
             string email = txtEmail.Text;
             string direccion = txtDireccion.Text;
+            decimal credito_disponible = decimal.Parse(txtCredito_disponible.Text);
+            decimal credito_usado = decimal.Parse(txtCredito_usado.Text);
             string estado = txtEstado.Text;
             DateTime fecha_creacion = DateTime.Parse(txtFecha_creacion.Text);
             bool resultado = false;
-            if(Proveedor_id == 0)
+            if (cliente_id == 0)
             {
-                resultado = Proveedor.Crear(nombre, ruc_dni, telefono, email, direccion, estado, fecha_creacion);
+                resultado = Clientes.Crear(nombre, dni_ruc, telefono, email, direccion, credito_disponible, credito_usado, estado, fecha_creacion);
             }
             else
             {
-                resultado = Proveedor.Editar(Proveedor_id, nombre, ruc_dni, telefono, email, direccion, estado, fecha_creacion);
+                resultado = Clientes.Editar(cliente_id, nombre, dni_ruc, telefono, email, direccion, credito_disponible, credito_usado, estado, fecha_creacion);
             }
             if (resultado)
             {
-                MessageBox.Show("Operacion Realizada Correctamente");
+                MessageBox.Show("Operacion realizada correctamente");
             }
-            dgDatos.DataSource = Proveedor.obtener();
+            dgDatos.DataSource = Clientes.obtener();
             Limpiar();
         }
         private void Limpiar()
         {
             txtNombre.Clear();
-            txtRuc_dni.Clear();
+            txtDNI_RUC.Clear();
             txtTelefono.Clear();
             txtEmail.Clear();
             txtDireccion.Clear();
+            txtCredito_disponible.Clear();
+            txtCredito_usado.Clear();
             txtEstado.Clear();
             txtFecha_creacion.Clear();
-            Proveedor_id = 0;
+            cliente_id = 0;
             txtNombre.Focus();
         }
 
-        private void btnEditar_Click(object sender, EventArgs e)
+        private void btnEditar_Click_1(object sender, EventArgs e)
         {
             txtNombre.Text = dgDatos.CurrentRow.Cells["nombre"].Value.ToString();
-            txtRuc_dni.Text = dgDatos.CurrentRow.Cells["ruc_dni"].Value.ToString();
+            txtDNI_RUC.Text = dgDatos.CurrentRow.Cells["dni_ruc"].Value.ToString();
             txtTelefono.Text = dgDatos.CurrentRow.Cells["telefono"].Value.ToString();
             txtEmail.Text = dgDatos.CurrentRow.Cells["email"].Value.ToString();
             txtDireccion.Text = dgDatos.CurrentRow.Cells["direccion"].Value.ToString();
+            txtCredito_disponible.Text = dgDatos.CurrentRow.Cells["credito_disponible"].Value.ToString();
+            txtCredito_usado.Text = dgDatos.CurrentRow.Cells["credito_usado"].Value.ToString();
             txtEstado.Text = dgDatos.CurrentRow.Cells["estado"].Value.ToString();
             txtFecha_creacion.Text = dgDatos.CurrentRow.Cells["fecha_creacion"].Value.ToString();
         }
 
-        private void btnEliminar_Click(object sender, EventArgs e)
+        private void btnEliminar_Click_1(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(dgDatos.CurrentRow.Cells["id_proveedor"].Value.ToString());
-            bool resultado = Proveedor.Eliminar(id);
+            int id = Convert.ToInt32(dgDatos.CurrentRow.Cells["id_cliente"].Value.ToString());
+            bool resultado = Clientes.Eliminar(id);
             if (resultado)
             {
-                MessageBox.Show("Proveedor Eliminado Correctamente");
+                MessageBox.Show("Cliente Eliminado Correctamente");
             }
-            dgDatos.DataSource = Proveedor.obtener();
+            dgDatos.DataSource = Clientes.obtener();
             Limpiar();
         }
     }

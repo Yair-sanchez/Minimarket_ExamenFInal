@@ -46,23 +46,45 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CategoriaFrm.cs">
+    <Compile Include="CategoriasFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CategoriaFrm.Designer.cs">
-      <DependentUpon>CategoriaFrm.cs</DependentUpon>
+    <Compile Include="CategoriasFrm.Designer.cs">
+      <DependentUpon>CategoriasFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ClienteFrm.cs">
+    <Compile Include="ClientesFrm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ClienteFrm.Designer.cs">
-      <DependentUpon>ClienteFrm.cs</DependentUpon>
+      <DependentUpon>ClientesFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ComprasFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComprasFrm.Designer.cs">
+      <DependentUpon>ComprasFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Conexion.cs" />
     <Compile Include="FormasPagosFrm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormasPagosFrm.Designer.cs">
       <DependentUpon>FormasPagosFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Categorias.cs" />
+    <Compile Include="Modelos\Clientes.cs" />
+    <Compile Include="Modelos\Compras.cs" />
+    <Compile Include="Modelos\FormasPagos.cs" />
+    <Compile Include="Modelos\Movimientos_de_inventario.cs" />
+    <Compile Include="Modelos\Productos.cs" />
+    <Compile Include="Modelos\Promociones.cs" />
+    <Compile Include="Modelos\Proveedor.cs" />
+    <Compile Include="Modelos\Ventas.cs" />
+    <Compile Include="Movimientos de inventarioFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Movimientos de inventarioFrm.Designer.cs">
+      <DependentUpon>Movimientos de inventarioFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="PrincipalFrm.cs">
       <SubType>Form</SubType>
@@ -90,14 +112,26 @@
     <Compile Include="ProveedorFrm.Designer.cs">
       <DependentUpon>ProveedorFrm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="CategoriaFrm.resx">
-      <DependentUpon>CategoriaFrm.cs</DependentUpon>
+    <Compile Include="VentasFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentasFrm.Designer.cs">
+      <DependentUpon>VentasFrm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CategoriasFrm.resx">
+      <DependentUpon>CategoriasFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ClienteFrm.resx">
-      <DependentUpon>ClienteFrm.cs</DependentUpon>
+    <EmbeddedResource Include="ClientesFrm.resx">
+      <DependentUpon>ClientesFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComprasFrm.resx">
+      <DependentUpon>ComprasFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormasPagosFrm.resx">
       <DependentUpon>FormasPagosFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Movimientos de inventarioFrm.resx">
+      <DependentUpon>Movimientos de inventarioFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PrincipalFrm.resx">
       <DependentUpon>PrincipalFrm.cs</DependentUpon>
@@ -119,6 +153,9 @@
     </Compile>
     <EmbeddedResource Include="ProveedorFrm.resx">
       <DependentUpon>ProveedorFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentasFrm.resx">
+      <DependentUpon>VentasFrm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
